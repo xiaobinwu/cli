@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+// esm模块，这样就可以在其他文件使用import关键字
+require = require('esm')(module, { cjs: true })
+
+require('../src/cli').cli(process.argv);
